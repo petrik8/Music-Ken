@@ -31,7 +31,7 @@ async def start_(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Commands", callback_data=f"help+1"),
+                    InlineKeyboardButton("𝙱𝙾𝚃 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂", callback_data=f"help+1"),
                 ],
             ]
         ),
@@ -46,7 +46,7 @@ async def gstart(_, message: Message):
         caption=f"""{PROJECT_NAME} siap digunakan!""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="Music Downloader", url=f"t.me/lagukamubot")],
+                [InlineKeyboardButton(text="𝙼𝚄𝚂𝙸𝙲 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁", url=f"t.me/lagukamubot")],
             ]
         ),
     )
@@ -88,12 +88,12 @@ def map(pos):
         button = [
             [
                 InlineKeyboardButton(
-                    text="Music downloader", url=f"https://t.me/lagukamubot"
+                    text="𝙼𝚄𝚂𝙸𝙲 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁", url=f"https://t.me/lagukamubot"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="Owner of bot", url="https://t.me/eleaxzeno"
+                    text="𝙾𝚆𝙽𝙴𝚁 𝙾𝙵 𝙱𝙾𝚃", url="https://t.me/eleaxzeno"
                 ),
             ],
         ]
@@ -102,12 +102,12 @@ def map(pos):
         button = [
             [
                 InlineKeyboardButton(
-                    text="Music downloader", url=f"https://t.me/lagukamubot"
+                    text="𝙼𝚄𝚂𝙸𝙲 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁", url=f"https://t.me/lagukamubot"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="Owner of bot", url="https://t.me/eleaxzeno"
+                    text="𝙾𝚆𝙽𝙴𝚁 𝙾𝙵 𝙱𝙾𝚃", url="https://t.me/eleaxzeno"
                 ),
             ],
         ]
@@ -115,10 +115,10 @@ def map(pos):
         button = [
             [
                 InlineKeyboardButton(
-                    text="Music downloader", url=f"https://t.me/lagukamubot"
+                    text="𝙼𝚄𝚂𝙸𝙲 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁", url=f"https://t.me/lagukamubot"
                 ),
                 InlineKeyboardButton(
-                    text="Owner of bot", url="https://t.me/eleaxzeno"
+                    text="𝙾𝚆𝙽𝙴𝚁 𝙾𝙵 𝙱𝙾𝚃", url="https://t.me/eleaxzeno"
                 ),
             ],
         ]
@@ -131,7 +131,7 @@ async def admincache(client, message: Message):
     await message.reply_text("""🔊 BOT MUSIK SIAP DIGUNAKAN""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="Bot commands", url=f"https://telegra.ph/%E1%B4%A2%E1%B4%87%C9%B4%E1%B4%8F-08-21")],
+                [InlineKeyboardButton(text="𝙱𝙾𝚃 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂", url=f"https://telegra.ph/%E1%B4%A2%E1%B4%87%C9%B4%E1%B4%8F-08-21")],
             ]
         ),
     )
@@ -141,27 +141,25 @@ async def admincache(client, message: Message):
 async def ghelp(_, message: Message):
     await message.reply_text(
         """
-𝑪𝒐𝒎𝒎𝒂𝒏𝒅𝒔 𝒊𝒏 𝒁𝑬𝑵𝑶 𝑴𝑺𝑪
+💠 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜 𝚒𝚗 𝚉𝙴𝙽𝙾 𝙼𝚂𝙲 !
 
-𝚏𝚘𝚛 𝚊𝚕𝚕 𝚞𝚜𝚎𝚛𝚜 :
+⚠️ 𝚏𝚘𝚛 𝚊𝚕𝚕 𝚞𝚜𝚎𝚛𝚜 :
  • /play (song name) : play song from youtube
  • /playlist : show the list song in queue
  • /search (video name) : search video from youtube
  • /lyric (song name) : find the lyrics of the song
 
-𝚏𝚘𝚛 𝚊𝚍𝚖𝚒𝚗𝚜 :
- • /musicplayer (on / off) - disable / enable music player
- • /userbotjoin - invite assistant bot
- • /reload - for refresh the admin list
- • /player - open music player settings panel
- • /skip - skip to the next song
- • /pause - pause the music streaming
- • /resume - resume the music was paused
- • /skip - skip to the next song
- • /end - stop music streaming""",
+⚠️ 𝚏𝚘𝚛 𝚊𝚍𝚖𝚒𝚗𝚜 :
+ • /musicplayer (on / off) : on / off bot
+ • /userbotjoin : invite assistant bot
+ • /reload : refresh the admin list
+ • /skip : skip to the next song
+ • /pause : pause the music
+ • /resume : resume the music
+ • /end : stop music streaming""",
         reply_markup=InlineKeyboardMarkup(
                   [
-                    [InlineKeyboardButton(text = 'Music Downloader', url = f"t.me/lagukamubot")]
+                    [InlineKeyboardButton(text = '𝙼𝚄𝚂𝙸𝙲 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁', url = f"t.me/lagukamubot")]
                 ]
         ),
     )
