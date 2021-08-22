@@ -18,7 +18,7 @@ from MusicKen.modules.msg import Messages as tr
 logging.basicConfig(level=logging.INFO)
 
 
-@Client.on_message(command("start") & filters.private & ~filters.edited)
+@Client.on_message(filters.command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""Hallo {message.from_user.first_name}, bot ini dapat digunakan untuk:
