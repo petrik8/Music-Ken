@@ -29,13 +29,13 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
-@Client.on_message(command(["pn", f"pn@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["p", f"p@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, m: Message):
     start = time()
-    m_reply = await m.reply_text("Pinging...")
+    m_reply = await m.reply_text("Ping...")
     delta_ping = time() - start
     await m_reply.edit_text(
-        f"{emoji.PING_PONG} **PONG!!**\n" f"`{delta_ping * 1000:.3f} ms`"
+        f"`{delta_ping * 1000:.3f} ms`"
     )
 
 
@@ -45,7 +45,5 @@ async def get_uptime(client: Client, m: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await m.reply_text(
-        f"{emoji.ROBOT}\n"
-        f"• **Uptime:** `{uptime}`\n"
-        f"• **Start Time:** `{START_TIME_ISO}`"
+        f"💠 `UPTIME` : `{uptime}`\n"
     )
