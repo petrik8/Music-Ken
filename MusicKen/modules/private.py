@@ -128,26 +128,10 @@ def map(pos):
 @Client.on_message(filters.command("reload") & filters.group & ~filters.edited)
 @authorized_users_only
 async def admincache(client, message: Message):
-    await message.reply_photo(
-        photo=f"{KENKAN}",
-        caption="✅ **Bot berhasil dimulai ulang!**\n\n **Daftar admin telah diperbarui**",
+    await message.reply_text("""🔊 BOT MUSIK SIAP DIGUNAKAN""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="🔵 ᴏᴡɴᴇʀ", url=f"t.me/{OWNER}")],
-                [
-                    InlineKeyboardButton(
-                        text="👥 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"
-                    ),
-                    InlineKeyboardButton(
-                        text="ᴄʜᴀɴɴᴇʟ 📣", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [
-                    InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"{SOURCE_CODE}"),
-                    InlineKeyboardButton(
-                        "💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/kenkansaja/tip"
-                    ),
-                ],
+                [InlineKeyboardButton(text="Bot commands", url=f"https://telegra.ph/%E1%B4%A2%E1%B4%87%C9%B4%E1%B4%8F-08-21")],
             ]
         ),
     )
@@ -157,59 +141,27 @@ async def admincache(client, message: Message):
 async def ghelp(_, message: Message):
     await message.reply_text(
         """
-**🔰 Perintah**
-      
-**=>> Memutar Lagu 🎧**
-      
-• /play (nama lagu) - Untuk Memutar lagu yang Anda minta melalui youtube
-• /ytplay (nama lagu) - Untuk Memutar lagu yang Anda minta melalui youtube
-• /yt (nama lagu) - Untuk Memutar lagu yang Anda minta melalui youtube
-• /p (nama lagu) - Untuk Memutar lagu yang Anda minta melalui youtube
-• /lplay - Untuk Memutar lagu yang Anda reply dari gc
-• /player: Buka menu Pengaturan pemain
-• /skip: Melewati trek saat ini
-• /pause: Jeda trek
-• /resume: Melanjutkan trek yang dijeda
-• /end: ​​Menghentikan pemutaran media
-• /current: Menampilkan trek yang sedang diputar
-• /playlist: Menampilkan daftar putar
-      
-Semua Perintah Bisa Digunakan Kecuali Perintah /player /skip /pause /resume  /end Hanya Untuk Admin Grup
-      
-**==>>Download Lagu 📥**
-      
-• /song [nama lagu]: Unduh audio lagu dari youtube
+𝑪𝒐𝒎𝒎𝒂𝒏𝒅𝒔 𝒊𝒏 𝒁𝑬𝑵𝑶 𝑴𝑺𝑪
 
-**=>> Saluran Music Play 🛠**
-      
-⚪️ Hanya untuk admin grup tertaut:
-      
-• /cplay (nama lagu) - putar lagu yang Anda minta
-• /cplaylist - Tampilkan daftar yang sedang diputar
-• /cccurrent - Tampilkan sedang diputar
-• /cplayer - buka panel pengaturan pemutar musik
-• /cpause - jeda pemutaran lagu
-• /cresume - melanjutkan pemutaran lagu
-• /cskip - putar lagu berikutnya
-• /cend - hentikan pemutaran musik
-• /userbotjoinchannel - undang asisten ke obrolan Anda""",
+𝚏𝚘𝚛 𝚊𝚕𝚕 𝚞𝚜𝚎𝚛𝚜 :
+ • /play (song name) : play song from youtube
+ • /playlist : show the list song in queue
+ • /search (video name) : search video from youtube
+ • /lyric (song name) : find the lyrics of the song
+
+𝚏𝚘𝚛 𝚊𝚍𝚖𝚒𝚗𝚜 :
+ • /musicplayer (on / off) - disable / enable music player
+ • /userbotjoin - invite assistant bot
+ • /reload - for refresh the admin list
+ • /player - open music player settings panel
+ • /skip - skip to the next song
+ • /pause - pause the music streaming
+ • /resume - resume the music was paused
+ • /skip - skip to the next song
+ • /end - stop music streaming
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="🔵 ᴏᴡɴᴇʀ", url=f"t.me/{OWNER}")],
-                [
-                    InlineKeyboardButton(
-                        text="👥 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"
-                    ),
-                    InlineKeyboardButton(
-                        text="ᴄʜᴀɴɴᴇʟ 📣", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [
-                    InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"{SOURCE_CODE}"),
-                    InlineKeyboardButton(
-                        "💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/kenkansaja/tip"
-                    ),
-                ],
+                [InlineKeyboardButton(text="Music downloader", url=f"t.me/lagukamubot")],
             ]
         ),
     )
