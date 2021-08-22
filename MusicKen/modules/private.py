@@ -161,7 +161,11 @@ async def ghelp(_, message: Message):
  • /end - stop music streaming"""
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="Music downloader", url=f"t.me/lagukamubot")],
+                [
+                    InlineKeyboardButton(
+                        text="Music downloader", url=f"https://t.me/lagukamubot"
+                    ),
+                ],
             ]
         ),
     )
