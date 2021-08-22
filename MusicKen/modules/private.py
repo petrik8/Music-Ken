@@ -115,10 +115,10 @@ def map(pos):
         button = [
             [
                 InlineKeyboardButton(
-                    text="⬅️ sᴇʙᴇʟᴜᴍɴʏᴀ", callback_data=f"help+{pos-1}"
+                    text="Music downloader", url=f"https://t.me/lagukamubot"
                 ),
                 InlineKeyboardButton(
-                    text="sᴇʟᴀɴᴊᴜᴛɴʏᴀ ➡️", callback_data=f"help+{pos+1}"
+                    text="Owner of bot", url="https://t.me/eleaxzeno"
                 ),
             ],
         ]
