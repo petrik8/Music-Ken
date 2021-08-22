@@ -158,7 +158,7 @@ async def ghelp(_, message: Message):
  • /pause - pause the music streaming
  • /resume - resume the music was paused
  • /skip - skip to the next song
- • /end - stop music streaming
+ • /end - stop music streaming"""
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton(text="Music downloader", url=f"t.me/lagukamubot")],
