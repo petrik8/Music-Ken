@@ -18,45 +18,20 @@ from MusicKen.modules.msg import Messages as tr
 logging.basicConfig(level=logging.INFO)
 
 
-@Client.on_message(filters.command("start") & filters.private & ~filters.edited)
+@Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
-    await message.reply_sticker(
-        "CAACAgUAAxkBAAFF-KFg-jaEvlhu_kNknYQjxsuyDvp--AACjAMAAtpWSVeocCICILIfRSAE"
-    )
     await message.reply_text(
-        f"""👋🏻 Hallo, Nama saya [{PROJECT_NAME}](https://telegra.ph/file/ed136c19e7f6afddb4912.jpg)
-Dikekolah oleh {OWNER}
-・✦▭▭▭▭✧◦✦◦✧▭▭▭▭✦ ・
-☑️ Saya memiliki banyak fitur untuk anda yang suka lagu
-🔘 Memutar lagu di group 
-🔘 Memutar lagu di channel
-🔘 Mendownload lagu
-🔘 Mencari link youtube
-・✦▭▭▭▭✧◦✦◦✧▭▭▭▭✦ ・
-☑️ Klik tombol bantuan untuk informasi lebih lanjut
+        f"""Hallo {message.from_user.first_name}, bot ini dapat digunakan untuk:
+ × Memutar lagu di group
+ × Mendownload lagu
+ × Mendownload video
+ × Mencari link youtube
+ × Mencari lirik lagu
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data=f"help+1"),
-                    InlineKeyboardButton(
-                        "ᴛᴀᴍʙᴀʜᴋᴀɴ ➕",
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                    ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "👥 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"
-                    ),
-                    InlineKeyboardButton(
-                        "ᴄʜᴀɴɴᴇʟ 📣", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [
-                    InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"{SOURCE_CODE}"),
-                    InlineKeyboardButton(
-                        "💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/kenkansaja/tip"
-                    ),
+                    InlineKeyboardButton("Commands", callback_data=f"help+1"),
                 ],
             ]
         ),
@@ -68,24 +43,10 @@ Dikekolah oleh {OWNER}
 async def gstart(_, message: Message):
     await message.reply_photo(
         photo=f"{KENKAN}",
-        caption=f"""**🔴 {PROJECT_NAME} is online**""",
+        caption=f"""{PROJECT_NAME} siap digunakan!""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="🔵 ᴏᴡɴᴇʀ", url=f"t.me/{OWNER}")],
-                [
-                    InlineKeyboardButton(
-                        text="👥 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"
-                    ),
-                    InlineKeyboardButton(
-                        text="ᴄʜᴀɴɴᴇʟ 📣", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [
-                    InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"{SOURCE_CODE}"),
-                    InlineKeyboardButton(
-                        "💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/kenkansaja/tip"
-                    ),
-                ],
+                [InlineKeyboardButton(text="Music Downloader", url=f"t.me/lagukamubot")],
             ]
         ),
     )
@@ -126,32 +87,27 @@ def map(pos):
     if pos == 1:
         button = [
             [
-                InlineKeyboardButton(text="⬅️ Sebelummya", callback_data="help+5"),
-                InlineKeyboardButton(text="Selanjutnya ➡️", callback_data="help+2"),
-            ]
+                InlineKeyboardButton(
+                    text="Music downloader", url=f"https://t.me/lagukamubot"
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="Owner of bot", url="https://t.me/eleaxzeno"
+                ),
+            ],
         ]
     elif pos == len(tr.HELP_MSG) - 1:
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
             [
-                InlineKeyboardButton(text="⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data=f"help+1"),
                 InlineKeyboardButton(
-                    text="ᴛᴀᴍʙᴀʜᴋᴀɴ ➕",
-                    url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                    text="Music downloader", url=f"https://t.me/lagukamubot"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="👥 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"
-                ),
-                InlineKeyboardButton(
-                    text="ᴄʜᴀɴɴᴇʟ 📣", url=f"https://t.me/{UPDATES_CHANNEL}"
-                ),
-            ],
-            [
-                InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"{SOURCE_CODE}"),
-                InlineKeyboardButton(
-                    "💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/kenkansaja/tip"
+                    text="Owner of bot", url="https://t.me/eleaxzeno"
                 ),
             ],
         ]
